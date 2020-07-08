@@ -16,7 +16,7 @@ main(){
 	printf("-------------------------\n");
 	
 	do{
-		printf("\nEscolha um dos operadores: \n[1]Soma \n[2]Subtração \n[3]Muntiplicação \n[4]Divisão \n[5]Equação do 2° grau \n-->");
+		printf("\nEscolha um dos operadores: \n[1]Soma \n[2]Subtração \n[3]Muntiplicação \n[4]Divisão \n[5]Equação do 2° grau \n[6]Seguência de Fibonacci \n-->");
 		scanf("%d", &e);
 	
 		switch(e){
@@ -111,6 +111,28 @@ main(){
 				if (delta < 0){
 					printf("\nNão possui raiz real para X");
 					}
+				break;
+				
+			case 6:
+				int i, r, p, s, aux;
+				p = 0;
+				aux = 0;
+				i = 1;
+				s = 1;
+				system("cls");
+				
+				printf("Digtite o tamanho da sequencia: \n");
+				scanf("%d", &r);
+				printf("\n");
+				printf("%d \n", s);
+				
+				while(i < r){
+					i = i + 1;
+					aux = p + s;
+					p = s;
+					s = aux;
+					printf("%d \n", aux);
+				}
 				break;			
 				default:
 					printf("Valor inválido!");
@@ -125,5 +147,7 @@ main(){
 			scanf("%d", &i);
 		}
 	}while(i == 1);
+	
+	getche();
 }
 	
